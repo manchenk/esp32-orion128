@@ -1,0 +1,16 @@
+menu "Intel8080 emulator configuration"
+
+config CPU_MNEMONIC_ENABLE
+    bool "Enable mnemonic tracing support"
+    default false
+    help
+        Enable mnemonic tracing support
+
+config CPU_CYCLES_ENABLE
+    bool "Enable CPU speed control support"
+    default false
+    help
+        Enable CPU speed control support
+
+endmenu
+

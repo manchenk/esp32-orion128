@@ -1,0 +1,59 @@
+menu "Orion-128 Emulator"
+
+    choice DISPLAY_TYPE
+        prompt "Choose supported display device"
+        default DISPLAY_TYPE_ILI9486
+        help
+            Select display device connected to the ESP32.
+        config DISPLAY_TYPE_ILI9486
+            bool "ILI9486"
+            help
+                ILI9486 display module.
+        config DISPLAY_TYPE_ST7796S
+            bool "ST7796S"
+            help
+                ST7796S display module.
+    endchoice
+
+    menu "LCD pinout"
+
+    config LCD_RD_PIN
+        int "LCD RD pin"
+        default 23
+        help 
+            LCD RD pin
+
+    config LCD_WR_PIN
+        int "LCD WR pin"
+        default 22
+        help 
+            LCD WR pin
+
+    config LCD_RS_PIN
+        int "LCD RS pin"
+        default 21
+        help 
+            LCD RS pin
+
+    config LCD_CS_PIN
+        int "LCD CS pin"
+        default 4
+        help 
+            LCD CS pin
+
+    config LCD_RST_PIN
+        int "LCD RST pin"
+        default 2
+        help 
+            LCD RST pin
+
+    config LCD_D0_PIN
+        int "LCD D0 pin"
+        default 12
+        help 
+            LCD D0 pin
+            Other bus lines (D1-D7) must be connected to the following consecutive pin numbers (13-19)
+
+    endmenu
+
+endmenu

@@ -1,0 +1,13 @@
+*.o
+*.old
+
+build/
+
+# eclipse setting
+.settings
+.cproject
+.project
+
+# vscode setting
+.vscode
+
